@@ -2,7 +2,7 @@
     "name":"phpro/remote-media",
     "type":"magento-module",
     "license":"BSD-3-Clause",
-    "homepage":"https://github.com/phpro/Phpro_RemoteMedia",
+    "homepage":"https://github.com/phpro/mage-remote-media",
     "description":"Magento development tool to automatically fetch catalog product images from a production environment for a development or staging environment.",
     "authors":[
         {
