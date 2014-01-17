@@ -1,0 +1,2 @@
+app/etc/modules/*                        app/etc/modules/
+app/code/community/Phpro/RemoteMedia/*   app/code/local/Phpro/RemoteMedia/
