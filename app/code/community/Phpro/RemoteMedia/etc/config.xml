@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Phpro_RemoteMedia>
+            <version>1.0.0</version>
+        </Phpro_RemoteMedia>
+    </modules>
+    <global>
+        <helpers>
+            <phpro_remotemedia>
+                <class>Phpro_RemoteMedia_Helper</class>
+            </phpro_remotemedia>
+        </helpers>
+        <models>
+            <phpro_remotemedia>
+                <class>Phpro_RemoteMedia_Model</class>
+            </phpro_remotemedia>
+            <catalog>
+                <rewrite>
+                    <product_image>Phpro_RemoteMedia_Model_Product_Image</product_image>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+    <default>
+        <dev>
+            <remote_media>
+                <enabled>0</enabled>
+                <production_media_url>10</production_media_url>
+            </remote_media>
+        </dev>
+    </default>
+</config>
