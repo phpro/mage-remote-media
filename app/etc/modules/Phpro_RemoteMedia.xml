@@ -4,7 +4,6 @@
         <Phpro_RemoteMedia>
             <active>true</active>
             <codePool>community</codePool>
-            <depends></depends>
         </Phpro_RemoteMedia>
     </modules>
 </config>

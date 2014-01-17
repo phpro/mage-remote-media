@@ -11,5 +11,9 @@
     ],
     "require":{
         "magento-hackathon/magento-composer-installer":"*"
+    },
+    "require-dev":{
+        "ecomdev/mage-ci": "dev-master",
+        "phpunit/phpunit": "3.7.*"
     }
 }

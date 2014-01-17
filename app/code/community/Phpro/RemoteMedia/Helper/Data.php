@@ -38,7 +38,7 @@ class Phpro_RemoteMedia_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function fetchRemoteProductionImage($filename)
     {
-        if(!$this->getRemoteMediaEnabled() || $this->getProductionMediaUrl() == '') {
+        if(!$this->getRemoteMediaEnabled() || $this->getProductionMediaUrl() == '' || $filename == '') {
             return false;
         }
 
@@ -49,18 +49,29 @@ class Phpro_RemoteMedia_Helper_Data extends Mage_Core_Helper_Abstract
 
         try {
             $mediaFile = file_get_contents($productionMediaUrl);
-            $this->writeMediaFile($targetMediaFilePath, $mediaFile);
+
+            if($mediaFile) {
+                $this->writeMediaFile($targetMediaFilePath, $mediaFile);
+            } else {
+                return false;
+            }
 
         } catch(Exception $e) {
-            Mage::log("Unable to fetch and store remote production image");
-            Mage::log($e);
+            Mage::log("Unable to fetch and store remote production image: ".$e->getMessage());
+            Mage::log($filename);
             return false;
         }
 
         return $filename;
     }
 
-
+    /**
+     * Fetch the media file from the remote production and write it to a file
+     * @param $target
+     * @param $source
+     * @return bool
+     * @throws Exception
+     */
     public function writeMediaFile($target, $source)
     {
         $file = new Varien_Io_File();

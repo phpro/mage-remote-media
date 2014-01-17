@@ -26,7 +26,7 @@
         <dev>
             <remote_media>
                 <enabled>0</enabled>
-                <production_media_url>10</production_media_url>
+                <production_media_url></production_media_url>
             </remote_media>
         </dev>
     </default>
