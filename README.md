@@ -17,3 +17,17 @@ Usage / installation
 - Configure the module in the System > Configuration > Development > PHPro - Remote Media Fetch Settings
 - Enable the module and configure the URL to the production media URL
 - Refresh a page and wait until all the images are downloaded (this only adds a small one-time overhead)
+
+Supported Magento version
+=================
+
+- Considered to work on most recent versions of Magento Community / Enterprise
+- Actually tested on 
+-- Magento Community Edition 1.7.1 & 1.8.1
+-- Magento Enterprise Edition 1.13.1.0
+
+Todo
+=================
+- Prevent usage of file_get_contents in helper/Data.php
+- Write unit tests
+- Run unit tests on Travis
