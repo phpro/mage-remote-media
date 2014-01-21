@@ -21,7 +21,8 @@ Usage / installation
 Supported Magento version
 =================
 
-Considered to work on most recent versions of Magento Community / Enterprise
+Considered to work on most recent versions of Magento Community / Enterprise.
+
 Actually tested on :
 - Magento Community Edition 1.7.1 & 1.8.1
 - Magento Enterprise Edition 1.13.1.0
