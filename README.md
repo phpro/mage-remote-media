@@ -30,5 +30,6 @@ Actually tested on :
 Todo
 =================
 - Prevent usage of file_get_contents in helper/Data.php
+- Add support for category and other types of images
 - Write unit tests
 - Run unit tests on Travis
