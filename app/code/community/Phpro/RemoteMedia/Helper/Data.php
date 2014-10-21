@@ -44,8 +44,12 @@ class Phpro_RemoteMedia_Helper_Data extends Mage_Core_Helper_Abstract
 
         $relativeFilePath = '/catalog/product' . $filename;
 
-        $productionMediaUrl = $this->getProductionMediaUrl().$relativeFilePath;
+        $productionMediaUrl = rtrim($this->getProductionMediaUrl(), '/') . $relativeFilePath;
         $targetMediaFilePath = Mage::getBaseDir('media').$relativeFilePath;
+        
+        if (is_file($targetMediaFilePath)) {
+            return $filename;
+        }
 
         try {
             $mediaFile = file_get_contents($productionMediaUrl);
