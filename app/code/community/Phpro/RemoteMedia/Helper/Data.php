@@ -39,7 +39,7 @@ class Phpro_RemoteMedia_Helper_Data extends Mage_Core_Helper_Abstract
     public function fetchRemoteProductionImage($filename)
     {
         if(!$this->getRemoteMediaEnabled() || $this->getProductionMediaUrl() == '' || $filename == '') {
-            return false;
+            return $filename;
         }
 
         $relativeFilePath = '/catalog/product' . $filename;
